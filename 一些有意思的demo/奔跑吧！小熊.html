@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background-color: skyblue;
+        }
+        div{
+            position: absolute;
+            bottom: 100px;
+            left: -10%;
+            width: 100px;
+            height: 50px;
+            background: url(./images/bear-25676f9.png) no-repeat 0 0;
+            background-size: 800px auto;
+            animation: runningbear .4s steps(8) infinite;
+            transition: left 4s;
+        }
+        .run{
+            left: 47%;
+        }
+        @keyframes runningbear{
+            0%{
+                background-position: 0 0;
+            }
+            100%{
+                background-position: -800px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 百度浏览器的一个动画 -->
+    <div id="bear"></div>
+    <script>
+        setTimeout(function () {  
+            document.getElementById('bear').classList.add('run');
+        },300)
+    </script>
+</body>
+</html>

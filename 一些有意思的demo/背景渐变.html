@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background-color: #666;
+        }
+
+        div {
+            float: left;
+            margin-top: 50px;
+            margin-left: 50px;
+            width: 200px;
+            height: 200px;
+        }
+
+        .box1 {
+            /* 线性渐变 */
+            background: linear-gradient(#6dd27c, #1bcdae);
+        }
+
+        .box2 {
+            background: linear-gradient(white 0%, white 33.3%, blue 33.3%, blue 66.6%, red 66.6%, red 100%);
+        }
+
+        .box3 {
+            background: repeating-linear-gradient(45deg, #000 0%, #000 5%, #fff 5%, #fff 10%);
+        }
+
+        .box4 {
+            border-radius: 50%;
+            /* background: radial-gradient(形状 大小 位置, 颜色 位置, ...); */
+            background: radial-gradient(circle farthest-corner at 50px 50px, #e4e4e4, #333);
+        }
+
+        .box5 {
+            border-radius: 50%;
+            background: repeating-radial-gradient(circle farthest-corner at center center, #fff 0%, #fff 5%, #000 5%, #000 10%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <div class="box5"></div>
+</body>
+
+</html>

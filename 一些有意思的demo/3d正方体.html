@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .container{
+            width: 400px;
+            height: 400px;
+            margin: 100px auto;
+            transform-style: preserve-3d;
+            position: relative;
+            transform: rotate3d(1, 1, 1, 45deg);/*可以调整角度来观察这个正方体*/
+            transform-origin: 0 0;
+        }
+        ul li{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 400px;
+            height: 400px;
+            line-height: 400px;
+            font-size: 50px;
+            text-align: center;
+        }
+        ul li:nth-of-type(1){
+            background-color: hotpink;
+            transform: translateZ(200px);
+        }
+        ul li:nth-of-type(2){
+            background-color: rgb(131, 18, 184);
+            transform: translateZ(-200px);
+        }
+        ul li:nth-of-type(3){
+            background-color: yellowgreen;
+            transform: translateX(-200px) rotateY(-90deg);
+        }
+        ul li:nth-of-type(4){
+            background-color: skyblue;
+            transform: translateX(200px) rotateY(90deg);
+        }
+        ul li:nth-of-type(5){
+            background-color: purple;
+            transform: translateY(-200px) rotateX(90deg);
+        }
+        ul li:nth-of-type(6){
+            background-color: lightgray;
+            transform: translateY(200px) rotateX(-90deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <ul>
+            <li>这是前面</li>
+            <li>这是后面</li>
+            <li>这是左面</li>
+            <li>这是右面</li>
+            <li>这是上面</li>
+            <li>这是下面</li>
+        </ul>
+    </div>
+</body>
+</html>
